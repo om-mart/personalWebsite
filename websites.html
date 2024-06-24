@@ -1,0 +1,50 @@
+<style>
+    .container {
+        margin-top: 50px;
+        color: #c6d0f5;
+
+    }
+    .description {
+        height: 300px;
+    }
+    .custom-col {
+        padding: 25px;
+    }
+    .arrowButton {
+        background-color: transparent;
+        border-style: none;
+        cursor: pointer;
+    }
+    .arrow {
+        font-size: 60px;
+    }
+</style>
+
+<div class="container" id="contentContainer">
+    <div class="row">
+        <div class="col-md-6 custom-col">
+        </div>
+        <div class="col-md-5 custom-col">
+            <div class="description">
+                <h1 class="text-center">Step</h1>
+                <h4>Description</h4>
+                <p>An online shoe store. Features include item creation and filtering. Step was built using Django and Bootstrap.</p>
+            </div>
+        </div>
+        <div class="col-md-1 d-flex justify-content-center align-items-center">
+            <button class="arrowButton"><i class="bi bi-caret-right arrow link" onclick="loadContent('txst.html')"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function loadContent(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contentContainer').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading content:', error));
+    }
+</script>
+

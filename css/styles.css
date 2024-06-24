@@ -1,0 +1,47 @@
+/* Define CSS variables for repeated color values */
+:root {
+  --background-main: #1e1e2e;
+  --button-text: white;
+  --hover-opacity: 70%;
+  --text-color: #c6d0f5;
+  --sub-text: #bac2de;
+}
+
+.text {
+  color: var(--text-color);
+}
+
+.subText {
+  color: var(--sub-text);
+}
+
+.subText2 {
+  color: var(--sub-text2);
+}
+
+.linksContainer {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.link {
+    --s: 0.1em;   /* the thickness of the line */
+    --c: #babbf1; /* the color */
+    
+    color: #89b4fa;
+    padding-bottom: var(--s);
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+    text-decoration: none;
+    font-weight: 600;
+  }
+.link:hover {--_p: 100%}
+
+#projectLink {
+  font-size: 24px;
+}
