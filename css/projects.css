@@ -6,6 +6,10 @@
     --text-color: #c6d0f5;
 }
 
+.container{
+    color: var(--text-color);
+}
+
 .sectionBanner {
     width: 100%;
     height: 20vh;
@@ -15,7 +19,6 @@
     align-items: center;
     background-image: url('/pictures/portfolioBanner.png');
     background-size: cover;
-
 }
 
 #projectLinksContainer {
@@ -28,22 +31,28 @@
     justify-content: flex-end;
 }
 
-.container {
-    margin-top: 50px;
-    color: #c6d0f5;
-
-}
-.description {
-    height: 300px;
-}
-.custom-col {
-    padding: 25px;
-}
 .arrowButton {
     background-color: transparent;
     border-style: none;
     cursor: pointer;
 }
+
 .arrow {
     font-size: 60px;
+}
+
+.tag {
+    padding: 10px;
+    border-width: 3px;
+    border-radius: 20px;
+    background-color: transparent;
+    border-style: solid;
+    font-size: 0.9rem;
+    font-weight: 550;
+    margin-right: 15px;
+}
+
+#tag1 {
+    color: #b4befe;
+    border-color: #b4befe;
 }

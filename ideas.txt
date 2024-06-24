@@ -1,9 +1,0 @@
-theme: catppuccin
-
-HEADER
-should have matrix in catppuccin colors playing in background
-
-LINKS
-
-icons: 
-https://icons.getbootstrap.com/

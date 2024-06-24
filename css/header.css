@@ -28,10 +28,9 @@ section {
     text-align: center;
     justify-content: center;
     align-items: center;
-    background-image: url('/pictures/background2.png');
+    background-image: url('/pictures/background.png');
     background-size: cover;
     padding: 20px;
-
 }
 
 /* Button styles */
@@ -67,6 +66,7 @@ section {
     width: 50%;
     color: var(--text-color);
     border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #circle-image {

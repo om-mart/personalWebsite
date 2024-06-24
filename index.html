@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olivia Martinez</title>
+    <link rel="icon" type="image/png" href="pictures/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/projects.css">
@@ -35,31 +36,79 @@
                 </div>
             </div>
         </div>
-            <div class="container" id="contentContainer">
-                <div class="row">
-                    <div class="col-md-6 custom-col">
-                    </div>
-                    <div class="col-md-5 custom-col">
-                        <div class="description">
-                            <h1 class="text-center">Step</h1>
-                            <h4>Description</h4>
-                            <p>An online shoe store. Features include item creation and filtering. Step was built using Django and Bootstrap.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-1 d-flex justify-content-center align-items-center">
-                        <button class="arrowButton"><i class="bi bi-caret-right arrow link" onclick="loadContent('txst.html')"></i></button>
+        <div class="container" id="contentContainer">
+            <div class="row">
+                <div class="col-md-6 custom-col p-4">
+                </div>
+                <div class="col-md-5 custom-col p-4">
+                    <div class="description">
+                        <h1 class="text-center">Step</h1>
+                        <h4>Description</h4>
+                        <p>An online shoe store. Features include item creation and filtering.</p>
+                        <button class="tag" id="tag1">Django</button>
+                        <button class="tag" id="tag1">HTMX</button>
+                        <button class="tag" id="tag1">Bootstrap</button>
                     </div>
                 </div>
+                <div class="col-md-1 d-flex justify-content-center align-items-center">
+                    <button class="arrowButton"><i class="bi bi-caret-right arrow link" onclick="loadContent('txst.html')"></i></button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="skils">
-        <div class="sectionBanner">
-            <div class="container">
-
+    <section id="skills" style="color: #c6d0f5;">
+        <div class="sectionBanner"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ps-4 pe-4 pt-0">
+                    <div class="skills-container">
+                        <div class="skills-section">
+                            <h2>Languages</h2>
+                            <div class="skills-list">
+                                <div class="skill-item" id="skill1">Python</div>
+                                <div class="skill-item" id="skill2">JavaScript</div>
+                                <div class="skill-item" id="skill3">HTML</div>
+                                <div class="skill-item" id="skill4">CSS</div>
+                            </div>
+                        </div>
+                        <div class="skills-section">
+                            <h2>Frameworks</h2>
+                            <div class="skills-list">
+                                <div class="skill-item" id="skill1">Django</div>
+                                <div class="skill-item" id="skill2">React Native</div>
+                                <div class="skill-item" id="skill3">React</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ps-4 pe-4 pt-0">
+                    <div class="resume-container">
+                        <div class="job-experience">
+                            <div class="job-item">
+                                <h3>Full Stack Web Developer</h3>
+                                <p class="company">Network Infrastructure Team, Texas State University</p>
+                                <p class="date">May 2023 - Present</p>
+                                <ul class="job-details">
+                                    <li>Created tailored web applications to support students and staff in the Computer Science department.</li>
+                                    <li>Collaborated with university faculty to deliver efficient web-based solutions for the department.</li>
+                                    <li>View the projects I completed in this role: <a href="#" class="link">here</a>.</li>
+                                </ul>
+                            </div>
+                            <div class="job-item">
+                                <h3>Computer Science Tutor</h3>
+                                <p class="company">Computer Science Tutoring Lab, Texas State University</p>
+                                <p class="date">February 2023 - May 2023</p>
+                                <ul class="job-details">
+                                    <li>Provided peer tutoring to Computer Science students, improving their academic performance and understanding of complex concepts.</li>
+                                    <li>Played a pivotal role in student outreach, including organizing and teaching a <a href="#" class="link">REST API workshop</a> for 30+ college students.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -72,6 +121,16 @@
                 })
                 .catch(error => console.error('Error loading content:', error));
         }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+        const jobItems = document.querySelectorAll('.job-item');
+        jobItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    });
+
     </script>
 </body>
 </html>
