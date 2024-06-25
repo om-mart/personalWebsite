@@ -1,10 +1,18 @@
-/* Define CSS variables for repeated color values */
 :root {
   --background-main: #1e1e2e;
   --button-text: white;
   --hover-opacity: 70%;
   --text-color: #c6d0f5;
   --sub-text: #bac2de;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.container{
+  color: var(--text-color);
 }
 
 .text {
@@ -15,10 +23,6 @@
   color: var(--sub-text);
 }
 
-.subText2 {
-  color: var(--sub-text2);
-}
-
 .linksContainer {
     display: flex;
     justify-content: center;
@@ -26,8 +30,8 @@
 }
 
 .link {
-    --s: 0.1em;   /* the thickness of the line */
-    --c: #babbf1; /* the color */
+    --s: 0.1em;   
+    --c: #babbf1; 
     
     color: #89b4fa;
     padding-bottom: var(--s);
@@ -46,99 +50,13 @@
   font-size: 24px;
 }
 
-
-.skills-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #313244;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.skills-section {
-  margin-bottom: 30px;
-}
-
-.skills-section h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-}
-
-.skills-list {
+.sectionBanner {
+  width: 100%;
+  height: 20vh;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
-}
-
-.skill-item {
-  color: #313244;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  font-size: 1.2em;
-  transition: background-color 0.3s;
-}
-
-#skill1 {
-  background-color: #f38ba8;
-}
-
-#skill2 {
-  background-color: #eba0ac;
-}
-
-#skill3 {
-  background-color: #fab387;
-}
-
-#skill4 {
-  background-color: #89b4fa;
-}
-
-.skill-item:hover {
-  opacity: 0.75;
-}
-
-/* Add to your existing CSS */
-.job-item {
-  position: relative;
-  cursor: pointer;
-}
-
-.job-details {
-  display: none;
-}
-
-.job-item.active .job-details {
-  display: block;
-}
-
-.job-item::after {
-  content: '+';
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: #89b4fa;
-}
-
-.job-item.active::after {
-  content: '-';
-}
-
-.resume-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #313244;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  background-size: cover;
+  margin-bottom: 25px;
 }
