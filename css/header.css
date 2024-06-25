@@ -58,7 +58,6 @@ section {
 }
 
 /* ID specific styles */
-
 #bioContainer {
     padding: 30px;
     background-color: var(--background-main);
@@ -84,4 +83,31 @@ section {
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .headerContainer {
+        height: auto;
+        padding: 10px;
+    }
+
+    #bioContainer {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #buttonContainer {
+        padding: 15px;
+    }
+
+    .button {
+        color: transparent; /* make the text invisible */
+        user-select: none; /* prevent selection of the text */
+    }
+
+    .buttonIcon {
+        width: 40px;
+        height: 40px;
+    }
 }

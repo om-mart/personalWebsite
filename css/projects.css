@@ -37,3 +37,11 @@
 #portfolioBanner {
     background-image: url('/pictures/portfolioBanner.png');
 }
+
+@media (max-width: 768px) {
+
+    #projectLinksContainer{
+        margin-top: 170px;
+        gap: 30px;
+    }
+  }

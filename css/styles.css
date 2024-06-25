@@ -60,3 +60,18 @@ h1 {
   background-size: cover;
   margin-bottom: 25px;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .linksContainer {
+      height: auto;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  #projectLink {
+    font-size: 15px;
+  }
+}
