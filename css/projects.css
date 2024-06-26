@@ -8,6 +8,13 @@
     justify-content: flex-end;
 }
 
+#portfolioBanner {
+    background-image: url('/pictures/portfolioBanner.png');
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+}
+
 .arrowButton {
     background-color: transparent;
     border-style: none;
@@ -34,14 +41,8 @@
     border-color: #b4befe;
 }
 
-#portfolioBanner {
-    background-image: url('/pictures/portfolioBanner.png');
-}
-
 @media (max-width: 768px) {
-
     #projectLinksContainer{
-        margin-top: 170px;
-        gap: 30px;
+        display: none;
     }
-  }
+  } 

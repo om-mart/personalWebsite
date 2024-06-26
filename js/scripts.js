@@ -1,6 +1,6 @@
 // load a websites.html template on startup
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('websites.html')
+    fetch('projects.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('contentContainer').innerHTML = data;

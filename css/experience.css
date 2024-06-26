@@ -35,6 +35,7 @@
     border-radius: 5px;
     font-size: 1.2em;
     transition: background-color 0.3s;
+    user-select: none;
   }
   
   #skill1 {
@@ -53,43 +54,42 @@
     background-color: #89b4fa;
   }
   
-  .skill-item:hover {
-    opacity: var(--hover-opacity);
-  }
-  
   .job-item {
     position: relative;
     cursor: pointer;
-  }
-  
-  .job-details {
+    padding-right: 2rem; /* Ensure space for the + or - sign */
+}
+
+.job-details {
     display: none;
-  }
-  
-  .job-item.active .job-details {
+}
+
+.job-item.active .job-details {
     display: block;
-  }
-  
-  .job-item::after {
+}
+
+.job-item::after {
     content: '+';
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2rem;
+    font-size: 3rem;
     color: #89b4fa;
-  }
-  
-  .job-item.active::after {
+}
+
+.job-item.active::after {
     content: '-';
-  }
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #313244;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
   
-  .resume-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #313244;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+
   
