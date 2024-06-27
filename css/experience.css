@@ -1,85 +1,101 @@
+.experienceNavBar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--background-main);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1000; /* Ensure it is on top of other elements */
+}
 
-  #experienceBanner {
-    background-image: url('/pictures/experienceBanner.png');
-  }
+#experienceBanner {
+  background-image: url('../pictures/experienceBanner.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px; 
+  height: 100px; 
+  margin-left: 62px;
+}
 
-  .skills-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #313244;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
+.skills-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #313244;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-  .skills-section {
-    margin-bottom: 30px;
-  }
-  
-  .skills-section h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-  }
-  
-  .skills-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .skill-item {
-    color: #313244;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-    user-select: none;
-  }
-  
-  #skill1 {
-    background-color: #f38ba8;
-  }
-  
-  #skill2 {
-    background-color: #eba0ac;
-  }
-  
-  #skill3 {
-    background-color: #fab387;
-  }
-  
-  #skill4 {
-    background-color: #89b4fa;
-  }
-  
-  .job-item {
-    position: relative;
-    cursor: pointer;
-    padding-right: 2rem; /* Ensure space for the + or - sign */
+.skills-section {
+  margin-bottom: 30px;
+}
+
+.skills-section h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  color: #313244;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+
+#skill1 {
+  background-color: #f38ba8;
+}
+
+#skill2 {
+  background-color: #eba0ac;
+}
+
+#skill3 {
+  background-color: #fab387;
+}
+
+#skill4 {
+  background-color: #89b4fa;
+}
+
+.job-item {
+  position: relative;
+  cursor: pointer;
+  padding-right: 2rem; 
 }
 
 .job-details {
-    display: none;
+  display: none;
 }
 
 .job-item.active .job-details {
-    display: block;
+  display: block;
 }
 
 .job-item::after {
-    content: '+';
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    color: #89b4fa;
+  content: '+';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #89b4fa;
 }
 
 .job-item.active::after {
-    content: '-';
+  content: '-';
 }
 
 .resume-container {
@@ -90,6 +106,13 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-  
 
-  
+@media (max-width: 768px) {
+  .experienceNavBar {
+    justify-content: center;
+    align-items: center;
+  }
+  #experienceBanner {
+    margin: 0;
+  }
+}

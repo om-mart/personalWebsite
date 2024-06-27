@@ -19,7 +19,7 @@
     <!-- Header -->
     <section class="headerContainer">
         <div id="bioContainer">
-            <img src="/pictures/profile.jpg" id="circle-image" alt="Profile Picture">
+            <img src="pictures/profile.jpg" id="circle-image" alt="Profile Picture">
             <h1 class="text">Olivia Martinez</h1>
             <p class="subText">I create mobile apps and websites, <a class="link" target="_blank" href="https://github.com/om-mart/personalWebsite">including this one!</a></p>
             <div id="buttonContainer">
@@ -30,76 +30,85 @@
         </div>
     </section>
 
-    <!-- Portfolio section -->
-    <section id="projects">
-        <div class="sectionBanner" id="portfolioBanner">
-            <div id="projectLinksContainer">
-                <div class="linksContainer">
-                    <a class="link" id="projectLink" href="#projects" onclick="loadContent('projects.html')">All</a>
-                    <a class="link" id="projectLink" href="#projects" onclick="loadContent('websites.html')">Websites</a>
-                    <a class="link" id="projectLink" href="#projects" onclick="loadContent('mobile_apps.html')">Mobile Apps</a>
-                    <a class="link" id="projectLink" href="#projects" onclick="loadContent('workshop.html')">Workshop</a>
-                </div>
+<!-- Portfolio section -->
+<section id="projects">
+    <div class="container projectNavBar">
+        <div class="row align-items-center">
+            <div class="col-md-3 d-flex justify-content-center justify-content-md-start align-items-center" id="portfolioBannerContainer">
+                <div id="portfolioBanner"></div>
+            </div>
+            <div class="col-md-9 d-flex justify-content-center justify-content-md-center linksContainer">
+                <a class="link mx-2" id="projectLink" href="#projects" onclick="loadContent('projects.html')">All</a>
+                <a class="link mx-2" id="projectLink" href="#projects" onclick="loadContent('websites.html')">Websites</a>
+                <a class="link mx-2" id="projectLink" href="#projects" onclick="loadContent('mobile_apps.html')">Apps</a>
+                <a class="link mx-2" id="projectLink" href="#projects" onclick="loadContent('workshop.html')">Workshop</a>
             </div>
         </div>
-        <div class="container" id="contentContainer">
-        </div>
-    </section>
+    </div>
+    <div class="container" id="contentContainer">
+    </div>
+</section>
 
-    <!-- Experience section -->
-    <section id="skills">
-        <div class="sectionBanner" id="experienceBanner"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 ps-4 pe-4 pt-0">
-                    <div class="skills-container">
-                        <div class="skills-section">
-                            <h2>Languages</h2>
-                            <div class="skills-list">
-                                <div class="skill-item" id="skill1">Python</div>
-                                <div class="skill-item" id="skill2">JavaScript</div>
-                                <div class="skill-item" id="skill3">HTML</div>
-                                <div class="skill-item" id="skill4">CSS</div>
-                            </div>
+
+<!-- Experience section -->
+<section id="skills">
+    <div class="experienceNavBar">
+        <div class="d-flex justify-content-start align-items-center" id="experienceBanner"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ps-4 pe-4 pt-0">
+                <div class="skills-container">
+                    <div class="skills-section">
+                        <h2>Languages</h2>
+                        <div class="skills-list">
+                            <div class="skill-item" id="skill1">Python</div>
+                            <div class="skill-item" id="skill2">JavaScript</div>
+                            <div class="skill-item" id="skill3">HTML</div>
+                            <div class="skill-item" id="skill4">CSS</div>
                         </div>
-                        <div class="skills-section">
-                            <h2>Frameworks</h2>
-                            <div class="skills-list">
-                                <div class="skill-item" id="skill1">Django</div>
-                                <div class="skill-item" id="skill2">React Native</div>
-                                <div class="skill-item" id="skill3">React</div>
-                            </div>
+                    </div>
+                    <div class="skills-section">
+                        <h2>Frameworks</h2>
+                        <div class="skills-list">
+                            <div class="skill-item" id="skill1">Django</div>
+                            <div class="skill-item" id="skill2">React Native</div>
+                            <div class="skill-item" id="skill3">React</div>
+                            <div class="skill-item" id="skill4">Node.js</div> 
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 ps-4 pe-4 pt-0">
-                    <div class="resume-container">
-                        <div class="job-experience">
-                            <div class="job-item">
-                                <h3>Full Stack Web Developer</h3>
-                                <p class="company">Network Infrastructure Team, Texas State University</p>
-                                <p class="date">May 2023 - Present</p>
-                                <ul class="job-details">
-                                    <li>Created tailored web applications to support students and staff in the Computer Science department.</li>
-                                    <li>Collaborated with university faculty to deliver efficient web-based solutions for the department.</li>
-                                    <li>View the projects I completed in this role: <a href="#projects" class="link" onclick="loadContent('txst.html')">here</a>.</li>
-                                </ul>
-                            </div>
-                            <div class="job-item">
-                                <h3>Computer Science Tutor</h3>
-                                <p class="company">Computer Science Tutoring Lab, Texas State University</p>
-                                <p class="date">February 2023 - May 2023</p>
-                                <ul class="job-details">
-                                    <li>Provided peer tutoring to Computer Science students, improving their academic performance and understanding of complex concepts.</li>
-                                    <li>Played a pivotal role in student outreach, including organizing and teaching a <a href="#projects" class="link" onclick="loadContent('workshop.html')">REST API workshop</a> for 30+ college students.</li>
-                                </ul>
-                            </div>
+            </div>
+            <div class="col-md-6 ps-4 pe-4 pt-0">
+                <div class="resume-container">
+                    <div class="job-experience">
+                        <div class="job-item">
+                            <h3>Full Stack Web Developer</h3>
+                            <p class="company">Network Infrastructure Team, Texas State University</p>
+                            <p class="date">May 2023 - Present</p>
+                            <ul class="job-details">
+                                <li>Created tailored web applications to support students and staff in the Computer Science department.</li>
+                                <li>Collaborated with university faculty to deliver efficient web-based solutions for the department.</li>
+                                <li>View the projects I completed in this role: <a href="#projects" class="link" onclick="loadContent('txst.html')">here</a>.</li>
+                            </ul>
+                        </div>
+                        <div class="job-item">
+                            <h3>Computer Science Tutor</h3>
+                            <p class="company">Computer Science Tutoring Lab, Texas State University</p>
+                            <p class="date">February 2023 - May 2023</p>
+                            <ul class="job-details">
+                                <li>Provided peer tutoring to Computer Science students, improving their academic performance and understanding of complex concepts.</li>
+                                <li>Played a pivotal role in student outreach, including organizing and teaching a <a href="#projects" class="link" onclick="loadContent('workshop.html')">REST API workshop</a> for 30+ college students.</li>
+                            </ul>
                         </div>
                     </div>
-                </div>                
-    </section>
-    
-    <!-- Footer -->
+                </div>
+            </div>                
+        </div>
+    </div>
+</section>
+
+
     <!-- Footer -->
 <section>
     <div class="container d-flex align-items-center p-4">
