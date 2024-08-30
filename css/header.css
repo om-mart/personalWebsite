@@ -61,7 +61,7 @@ section {
 /* ID specific styles */
 #bioContainer {
   padding: 30px;
-  background-color: rgba(30, 30, 46, 0.9); /* Slight transparency */
+  background-color: var(--background-main);
   width: 50%;
   color: var(--text-color);
   border-radius: 15px;
