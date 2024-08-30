@@ -11,7 +11,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.container{
+.container {
   color: var(--text-color);
 }
 
@@ -24,27 +24,29 @@ h1 {
 }
 
 .linksContainer {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
 }
 
 .link {
-    --s: 0.1em;   
-    --c: #babbf1; 
-    
-    color: #89b4fa;
-    padding-bottom: var(--s);
-    background: 
-      linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
-      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-    -webkit-background-clip: text,padding-box;
-            background-clip: text,padding-box;
-    transition: 0.5s;
-    text-decoration: none;
-    font-weight: 600;
-  }
-.link:hover {--_p: 100%}
+  --s: 0.1em;
+  --c: #babbf1;
+
+  color: #89b4fa;
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+  text-decoration: none;
+  font-weight: 600;
+}
+.link:hover {
+  --_p: 100%;
+}
 
 #projectLink {
   font-size: 24px;
@@ -52,12 +54,11 @@ h1 {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-
   .linksContainer {
-      height: auto;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 
   #projectLink {
