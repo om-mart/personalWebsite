@@ -1,3 +1,6 @@
+/* ##### GENERAL STYLES ##### */
+
+/* color scheme */
 :root {
   --background-main: #1e1e2e;
   --button-text: white;
@@ -6,27 +9,22 @@
   --sub-text: #bac2de;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+/* tags */
+* {
+  background-color: var(--background-main);
 }
 
-.container {
-  color: var(--text-color);
+body {
+  background-color: var(--background-main);
 }
 
+/* text styles */
 .text {
   color: var(--text-color);
 }
 
 .subText {
   color: var(--sub-text);
-}
-
-.linksContainer {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
 }
 
 .link {
@@ -48,20 +46,60 @@ h1 {
   --_p: 100%;
 }
 
-#projectLink {
-  font-size: 24px;
+/* containers */
+.container {
+  background-color: var(--background-main);
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .linksContainer {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
+/* ##### BIO SECTION STYLES ##### */
 
-  #projectLink {
-    font-size: 15px;
-  }
+#profile-image {
+  border: 3px solid #eee;
+  margin-bottom: 15px;
+}
+
+.button {
+  color: var(--sub-text);
+  background-color: transparent;
+  font-weight: bold;
+  font-size: medium;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  opacity: var(--hover-opacity);
+}
+
+.buttonIcon {
+  width: 30px;
+  height: 30px;
+}
+
+/* ##### PROJECT SECTION STYLES ##### */
+
+.tag {
+  padding: 10px;
+  border-width: 3px;
+  border-radius: 20px;
+  background-color: transparent;
+  border-style: solid;
+  font-size: 0.9rem;
+  font-weight: 550;
+  margin-right: 15px;
+  color: #b4befe;
+  border-color: #b4befe;
+}
+
+#portfolioBanner {
+  background-image: url("../pictures/portfolioBanner.png");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 100px;
 }
