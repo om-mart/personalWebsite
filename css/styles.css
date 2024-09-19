@@ -105,23 +105,6 @@ body {
   height: 100px;
 }
 
-.arrow {
-  background-image: url("../pictures/arrow.png");
-  background-size: cover;
-  background-position: center;
-  background-color: transparent;
-  position: fixed; /* Position the button relative to the viewport */
-  z-index: 999; /* High z-index to ensure it's on top of other elements */
-  bottom: 20px; /* Adjust the positioning from the bottom */
-  right: 20px; /* Adjust the positioning from the right */
-  width: 80px;
-  height: 80px;
-}
-
-.arrow:hover {
-  opacity: var(--hover-opacity);
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
   /* Adjusts the container to be block-level and full-width on small screens */
