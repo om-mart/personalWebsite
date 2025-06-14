@@ -1,321 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Olivia Martinez</title>
-    <link rel="icon" type="image/png" href="icons/favicon.png" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!--Bootstrap-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-  </head>
+    <title>Olive Martinez</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body class="container">
-    <!-- Main Container -->
-    <div class="container d-flex flex-column flex-md-row py-5">
-      <!-- Bio Section -->
-      <div
-        class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center pe-md-5 mb-4 mb-md-0"
-        style="max-height: 80vh"
-      >
-        <div class="text-center">
-          <img
-            src="pictures/profile.jpg"
-            id="profile-image"
-            alt="Picture of Olivia Martinez"
-            class="rounded-circle mb-3"
-            style="width: 150px; height: 150px; object-fit: cover"
-          />
-          <h2 class="text fw-bold">Olivia Martinez</h2>
-          <h5 class="text mb-3">Full Stack Developer</h5>
-          <p class="subText" style="max-width: 300px; margin: 0 auto">
-            I create mobile apps and websites, such as this one! You can find
-            the code I made for this website on
-            <a
-              class="link"
-              target="_blank"
-              href="https://github.com/om-mart/personalWebsite"
-              >my GitHub</a
-            >.
-          </p>
-
-          <!-- Button Container -->
-          <div
-            class="d-flex justify-content-center align-items-center mt-4 gap-4 buttonContainer"
-          >
-            <a
-              href="https://github.com/om-mart"
-              class="button"
-              id="gitButton"
-              target="_blank"
-            >
-              <img
-                src="icons/github.svg"
-                class="buttonIcon"
-                alt="GitHub logo"
-              />GitHub</a
-            >
-            <a
-              href="https://www.linkedin.com/in/olivia-m-martinez/"
-              target="_blank"
-              class="button"
-              id="linkedInButton"
-            >
-              <img
-                src="icons/linkedin.svg"
-                class="buttonIcon"
-                alt="LinkedIn logo"
-              />LinkedIn</a
-            >
-            <a
-              href="https://www.thingiverse.com/oliviamerrya/designs"
-              target="_blank"
-              class="button"
-              id="thingiverseButton"
-            >
-              <img
-                src="icons/thingiverse.svg"
-                class="buttonIcon"
-                alt="Thingiverse logo"
-              />Thingiverse</a
-            >
-            <a
-              href="https://docs.google.com/document/d/1RnY6VwnheaYL1hNcBwXhs1zOw3IsDit0pemv7XTtJmM/pub"
-              class="button"
-              id="resumeButton"
-              target="_blank"
-            >
-              <img
-                src="icons/file-earmark-text-fill.svg"
-                class="buttonIcon"
-                alt="Resume icon"
-              />Resume</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Projects Section -->
-      <div
-        class="col-12 col-md-8 ps-md-4 d-flex flex-wrap align-items-center"
-        style="max-height: 80vh"
-      >
-        <div class="container" role="region" aria-labelledby="projects-title">
-          <div id="portfolioBanner"></div>
-          <!-- Project 1: BiteBoard -->
-          <div class="row">
-            <div class="col-12 mb-4">
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/YuA_UOrrEDg?si=A0QS9RuaUaR3sEbQ"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                aria-label="Bite Board demo video"
-              ></iframe>
-            </div>
-            <div class="col-12 mb-4">
-              <div class="description">
-                <h2 class="text-center text" id="biteboard-title">BiteBoard</h2>
-                <h4 class="text">Description</h4>
-                <p class="subText">
-                  A restaurant-centric social media app designed to let users
-                  see where their friends are eating and to find restaurants
-                  that match their dietary needs. BiteBoard was built using
-                  React Native and AWS Amplify.
+<body>
+    <div class="main-row">
+        <section class="smaller-column">
+            <div class="bio-card">
+                <img class="profile-image" src="assets/profile.jpg" />
+                <h2 class="text">Olive Martinez</h2>
+                <p class="text-center subtext">
+                  Web Dev ‧ Computer Vision ‧ Audio Analysis ‧ CAD
                 </p>
-                <h4 style="padding-bottom: 10px" class="text">Built With</h4>
-                <button class="tag" id="react-native-tag">React Native</button>
-                <button class="tag" id="aws-amplify-tag">AWS Amplify</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2: Step -->
-          <div class="row mt-5">
-            <div class="col-12 mb-4">
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/v2BZm5oPm38?si=ZyVXPDJw531LWGsm"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                aria-label="Step demo video"
-              ></iframe>
-            </div>
-            <div class="col-12 mb-4">
-              <div class="description">
-                <h2 class="text-center text" id="step-title">Step</h2>
-                <h4 class="text">Description</h4>
-                <p class="subText">
-                  An online shoe store. Features include item creation and
-                  filtering. The project source code is available on my
-                  <a
-                    class="link"
-                    href="https://github.com/om-mart/Step"
-                    target="_blank"
-                    >Github</a
-                  >.
-                </p>
-                <h4 style="padding-bottom: 10px" class="text">Built With</h4>
-                <button class="tag" id="django-tag">Django</button>
-                <button class="tag" id="htmx-tag">HTMX</button>
-                <button class="tag" id="bootstrap-tag">Bootstrap</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3: RESTful Thinking -->
-          <div class="row mt-5">
-            <div class="col-12 mb-4">
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/IVCY-oDftRE?si=VYLVOKMnavlIE22U"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                aria-label="RESTful Thinking: an API Workshop demo video"
-              ></iframe>
-            </div>
-            <div class="col-12 mb-4">
-              <div class="description">
-                <h2 class="text-center text" id="restful-thinking-title">
-                  RESTful Thinking
-                </h2>
-                <h4 class="text">Description</h4>
-                <p class="subText">
-                  In October 2023, I led a series of API workshops titled
-                  "RESTful Thinking" at Texas State University, teaching
-                  practical skills in developing REST APIs. The project source
-                  code is freely
-                  <a
-                    class="link"
-                    href="https://github.com/om-mart/to-do-api"
-                    target="_blank"
-                    >available on GitHub</a
-                  >, and the presentation slides can be
-                  <a
-                    class="link"
-                    href="https://docs.google.com/presentation/d/e/2PACX-1vSQMEL7MAvtmOhGjJl9ZXqsIaEKGsjzhbTQpBu2xWlNnpdNd3xX2fDLkumdaOiWjrAaxME57VJx_ldt/pub?start=false&loop=false&delayms=3000"
-                    target="_blank"
-                    >accessed here</a
-                  >.
-                </p>
-                <h4 style="padding-bottom: 10px" class="text">Built With</h4>
-                <button class="tag" id="flask-tag">Flask</button>
-                <button class="tag" id="python-tag">Python</button>
-                <button class="tag" id="bootstrap-tag">Bootstrap</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4: TXST Network Infrastructure Team -->
-          <div class="row mt-5">
-            <div class="col-12 mb-4">
-              <div class="text-center mb-4">
-                <h2 class="text" id="txst-title">Infrastructure Team</h2>
-                <h4 class="text text-start mx-auto" style="max-width: 600px">
-                  Description
-                </h4>
-                <p class="subText text-start mx-auto" style="max-width: 600px">
-                  I worked as a full-stack web developer for Texas State
-                  University's Network Infrastructure Team. Our department
-                  created custom web applications to support the Computer
-                  Science Department's students and faculty.
-                </p>
-                <p class="subText text-start mx-auto" style="max-width: 600px">
-                  <b
-                    >Below are the projects I completed for Texas State
-                    University:</b
-                  >
-                </p>
-              </div>
-
-              <!-- Projects Section with Cards -->
-              <div class="row justify-content-center">
-                <div class="col-md-5 mb-3">
-                  <div
-                    class="card shadow-sm h-100"
-                    style="border: 2px solid #c6d0f5; border-radius: 1px"
-                  >
-                    <div class="card-body">
-                      <h5 class="card-title text-start" style="color: #f5bde6">
-                        <i class="bi bi-calendar-check"></i> Event Management
-                      </h5>
-                      <p class="card-text subText text-start">
-                        A website designed for Computer Science Master's
-                        students to register for required exams and seminars. It
-                        also provides faculty with tools to monitor student
-                        progress in completing these events.
-                      </p>
-                      <h6 class="text text-start mb-2">Built With</h6>
-                      <button
-                        class="tag"
-                        id="django-tag"
-                        style="margin-bottom: 10px"
-                      >
-                        Django
-                      </button>
-                      <button class="tag" id="bootstrap-tag">Bootstrap</button>
-                    </div>
-                  </div>
+                <div id="links-container">
+                    <a href="https://github.com/om-mart" target="_blank">
+                        <img src="assets/github.svg" class="button-icon clickable" alt="GitHub logo" />
+                    </a>
+                    <a href="https://www.thingiverse.com/olive-maria/designs?" target="_blank" class="button">
+                        <img src="assets/thingiverse.svg" class="button-icon clickable" alt="Thingiverse logo" />
+                    </a>
+                    <a href="https://www.instagram.com/olive.marria/" target="_blank">
+                        <img src="assets/instagram.svg" class="button-icon clickable" alt="Instagram logo" />
+                    </a>
                 </div>
-                <div class="col-md-5 mb-3">
-                  <div
-                    class="card shadow-sm h-100"
-                    style="border: 2px solid #c6d0f5; border-radius: 1px"
-                  >
-                    <div class="card-body">
-                      <h5 class="card-title text-start" style="color: #f5bde6">
-                        <i class="bi bi-people-fill"></i> Employee Scheduler
-                      </h5>
-                      <p class="card-text subText text-start">
-                        A website for faculty to schedule TXST's Computer
-                        Science Tutoring Center employees.
-                      </p>
-                      <h6 class="text text-start mb-2">Built With</h6>
-                      <button
-                        class="tag"
-                        id="django-tag"
-                        style="margin-bottom: 10px"
-                      >
-                        Django
-                      </button>
-                      <button class="tag" id="bootstrap-tag">Bootstrap</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Closing Projects Section with Cards -->
+                <a href="https://docs.google.com/document/d/e/2PACX-1vQfOIIyrCFwDfK_X4MIhncvviISSUfadJ-CVPUWFIhfxVafCKW-mPkxO1Fj0LP1kVHY3ztCsWN7DBOM/pub" target="_blank">
+                    <button class="gradient-button clickable" id="resume-button">
+              Resume
+            </button>
+                </a>
             </div>
-            <!-- Closing row div -->
+        </section>
+        <section class="larger-column">
+          <div class="project-card">
+            <div class="project-card-wrapper">
+              <div class="project-image-wrapper">
+                <img src="assets/image.png" class="project-image" alt="Project preview" />
+              </div>
+              <div class="project-content">
+                <h2 class="project-title">Engraving Generator</h2>
+                <p class="subtext" id="project-description">
+                  A Python script that creates outlines around objects in photos, turning them into engravable SVGs. Useful for making stamps and laser cut engravings.
+                </p>
+                <a href="https://github.com/om-mart/SVG_Engrave" target="_blank">
+                  <button class="gradient-button clickable" id="github-button">View on Git</button>
+                </a>
+              </div>
+            </div>
           </div>
-          <!-- Closing main container div -->
-        </div>
-        <!-- Closing overall container div -->
-      </div>
-      <!-- Closing Projects Section div -->
-    </div>
-    <!-- Closing Main Container div -->
-    <script src="js/resize.js"></script>
-  </body>
+        </section>
+     </div>
+    <script src="index.js"></script>
+    <div class="background-overlay"></div>
+</body>
+
 </html>
