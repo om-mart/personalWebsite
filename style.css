@@ -179,18 +179,20 @@ html, body {
 .clickable:hover {
   opacity: var(--hover-opacity);
 }
-.navigation-button {
-  font-size: medium;
-  width: 400px;
-  height: 30px;
-  border-style: none;
-  border-radius: 5px;
-}
 .button-icon {
   width: 35px;
   height: 35px;
 }
+#resume-button {
+  background: linear-gradient(135deg, #f5bde6, #c6a0f6, #f5a97f);
+}
+#github-button {
+  background: linear-gradient(135deg, #8bd5ca, #b7bdf8, #8aadf4);
+}
+
+/* gradient */
 .gradient-button {
+  position: relative;
   color: #151520;
   padding: 12px 24px;
   border: none;
@@ -199,13 +201,50 @@ html, body {
   font-family: 'PixelifySans-SemiBold', sans-serif;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  overflow: hidden; /* Ensures shine stays within button */
+  z-index: 1;
 }
-#resume-button {
-  background: linear-gradient(135deg, #f5bde6, #c6a0f6, #f5a97f);
+
+/* Create the animated shine */
+.gradient-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75px; /* Start off to the left */
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 30%,
+    rgba(255,255,255,0.8) 50%,
+    rgba(255,255,255,0) 70%
+  );
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 2;
+  /* Animate the shine across the button */
+  animation: shine-move 2.2s linear infinite;
 }
-#github-button {
-  background: linear-gradient(135deg, #8bd5ca, #b7bdf8, #8aadf4);
+
+/* Keyframes for the diagonal shine sweep */
+@keyframes shine-move {
+  0% {
+    left: -75px;
+  }
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
+
+/* Make sure the button text is above the shine */
+.gradient-button span, .gradient-button {
+  position: relative;
+  z-index: 3;
+}
+
 
 @media (max-width: 700px) {
   .main-row {
