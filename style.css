@@ -1,5 +1,5 @@
 :root {
-  --background-main: #151520;
+  --background-main: #121230;
   --background-secondary: #1b1f35;
   --hover-opacity: 70%;
   --text-color: #cad3f5;
@@ -41,6 +41,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  background-color: var(--background-main);
   font-family: 'PixelifySans-SemiBold', sans-serif;
   background: url('assets/stars.gif') no-repeat center center fixed;
   background-size: cover;
