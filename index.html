@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Olive Martinez</title>
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
+  </head>
+  <body>
+    <nav class="nav">
+      <a
+        href="index.html">
+        <p class="text-center text" id="nav-text">Olive Martinez</p>
+        <div class="nav-icon"></div>
+      </a>
+    </nav>
     <div class="main-row">
-        <section class="smaller-column">
-            <div class="bio-card shadow">
-                <img class="profile-image shadow" src="assets/profile.jpg" />
-                <h2 class="text">Olive Martinez</h2>
-                <p class="text-center subtext">
-                  Software Engineer <br> Rust ‧ Python
-                </p>
-                <div id="links-container">
-                    <a href="https://github.com/om-mart" target="_blank">
-                        <img src="assets/github.svg" class="button-icon clickable" alt="GitHub logo" />
-                    </a>
-                    <a href="https://www.thingiverse.com/olive-maria/designs?" target="_blank" class="button">
-                        <img src="assets/thingiverse.svg" class="button-icon clickable" alt="Thingiverse logo" />
-                    </a>
-                    <a href="https://www.instagram.com/olive.marria/" target="_blank">
-                        <img src="assets/instagram.svg" class="button-icon clickable" alt="Instagram logo" />
-                    </a>
-                    <a href="https://www.inaturalist.org/observations?place_id=any&user_id=olive_m&verifiable=any" target="_blank">
-                      <img src="assets/inaturalist.svg" class="button-icon clickable" alt="Instagram logo" />
-                  </a>
-                </div>
-                <a href="https://docs.google.com/document/d/e/2PACX-1vQfOIIyrCFwDfK_X4MIhncvviISSUfadJ-CVPUWFIhfxVafCKW-mPkxO1Fj0LP1kVHY3ztCsWN7DBOM/pub" target="_blank">
-                    <button class="gradient-button clickable" id="resume-button">
-              Resume
-            </button>
-                </a>
+      <section class="smaller-column">
+        <div class="bio-card shadow">
+          <img class="profile-image shadow" src="assets/profile.jpg" />
+          <h2 class="text">Olive Martinez</h2>
+          <p class="text-center subtext">
+            Software Engineer <br> Rust ‧ Python
+          </p>
+          <div id="links-container">
+            <a href="https://github.com/om-mart" target="_blank">
+            <img src="assets/github.svg" class="button-icon clickable" alt="GitHub logo" />
+            </a>
+            <a href="https://www.thingiverse.com/olive-maria/designs?" target="_blank" class="button">
+            <img src="assets/thingiverse.svg" class="button-icon clickable" alt="Thingiverse logo" />
+            </a>
+            <a href="https://www.instagram.com/olive.marria/" target="_blank">
+            <img src="assets/instagram.svg" class="button-icon clickable" alt="Instagram logo" />
+            </a>
+            <a href="https://www.inaturalist.org/observations?place_id=any&user_id=olive_m&verifiable=any" target="_blank">
+            <img src="assets/inaturalist.svg" class="button-icon clickable" alt="Instagram logo" />
+            </a>
+          </div>
+          <a href="https://docs.google.com/document/d/e/2PACX-1vQfOIIyrCFwDfK_X4MIhncvviISSUfadJ-CVPUWFIhfxVafCKW-mPkxO1Fj0LP1kVHY3ztCsWN7DBOM/pub" target="_blank">
+          <button class="gradient-button clickable" id="resume-button">
+          Resume
+          </button>
+          </a>
+        </div>
+      </section>
+      <section class="larger-column">
+        <div class="project-card shadow">
+          <div class="project-card-wrapper">
+            <div class="project-image-wrapper">
+              <img src="assets/image.png" class="project-image" alt="Project preview" />
             </div>
-        </section>
-        <section class="larger-column">
-          <div class="project-card shadow">
-            <div class="project-card-wrapper">
-              <div class="project-image-wrapper">
-                <img src="assets/image.png" class="project-image" alt="Project preview" />
-              </div>
-              <div class="project-content">
-                <h2 class="project-title">Engraving Generator</h2>
-                <p class="subtext" id="project-description">
-                  A Python script that creates outlines around objects in photos, turning them into engravable SVGs. Useful for making stamps and laser cut engravings.
-                </p>
-                <a href="https://github.com/om-mart/SVG_Engrave" target="_blank">
-                  <button class="gradient-button clickable" id="github-button">View on Git</button>
-                </a>
-              </div>
+            <div class="project-content">
+              <h2 class="project-title">Engraving Generator</h2>
+              <p class="subtext" id="project-description">
+                A Python script that creates outlines around objects in photos, turning them into engravable SVGs. Useful for making stamps and laser cut engravings.
+              </p>
+              <a href="https://github.com/om-mart/SVG_Engrave" target="_blank">
+              <button class="gradient-button clickable" id="project-button">Learn more</button>
+              </a>
             </div>
           </div>
-        </section>
-     </div>
+        </div>
+      </section>
+    </div>
     <script src="index.js"></script>
     <div class="background-overlay"></div>
-</body>
-
+  </body>
 </html>

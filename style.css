@@ -38,7 +38,13 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 html, body {
+  overflow: hidden;
+
   height: 100%;
   margin: 0;
   background-color: var(--background-main);
@@ -58,6 +64,37 @@ html, body {
   pointer-events: none;
 }
 
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 5vh;
+  padding: 30px 0px 0px 30px; /* top right bottom left */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav > a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-icon {
+  width: 100px;
+  height: 100px;
+  background: url('assets/nyan.gif') center center no-repeat;
+  background-size: contain;
+}
+
+#nav-text {
+  padding: 2vh;
+  font-size: xx-large;
+  background-color: var(--background-main);
+}
+
 
 /* layout */
 .main-row {
@@ -67,7 +104,7 @@ html, body {
   height: 100vh;
   padding: 30px 30px 30px 100px; /* top right bottom left */
   gap: 30px;
-    position: relative;
+  position: relative;
   z-index: 1;
 }
 
@@ -100,14 +137,14 @@ html, body {
 .bio-card {
     display: flex;
     background-color: var(--background-secondary);
-    padding: 25px;
+    padding: 40px;
     border-radius: 15px;
     max-width: 300px; 
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 .project-card {
   background-color: var(--background-secondary);
@@ -189,7 +226,7 @@ html, body {
 #resume-button {
   background: linear-gradient(135deg, #f5bde6, #c6a0f6, #f5a97f);
 }
-#github-button {
+#project-button {
   background: linear-gradient(135deg, #8bd5ca, #b7bdf8, #8aadf4);
 }
 
