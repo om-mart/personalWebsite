@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="nav">
+    <nav class="nav shadow">
       <a
         href="index.html">
         <p class="text-center text" id="nav-text">Olive Martinez</p>
@@ -49,6 +49,24 @@
         <div class="project-card shadow">
           <div class="project-card-wrapper">
             <div class="project-image-wrapper">
+              <img src="assets/quilt.png" class="project-image" alt="Project preview" />
+            </div>
+            <div class="project-content">
+              <h2 class="project-title">Image Quilter</h2>
+              <p class="subtext" id="project-description">
+                A Python script that creates an image "quilt" by slicing patches from an image's
+                pixel matrix, randomly shuffling their positions, and stitching them together into a
+                new quilted image.
+              </p>
+              <a href="https://github.com/om-mart" target="_blank">
+              <button class="gradient-button clickable" id="project-button">Learn more</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card shadow">
+          <div class="project-card-wrapper">
+            <div class="project-image-wrapper">
               <img src="assets/image.png" class="project-image" alt="Project preview" />
             </div>
             <div class="project-content">
@@ -56,7 +74,7 @@
               <p class="subtext" id="project-description">
                 A Python script that creates outlines around objects in photos, turning them into engravable SVGs. Useful for making stamps and laser cut engravings.
               </p>
-              <a href="https://github.com/om-mart/SVG_Engrave" target="_blank">
+              <a href="https://github.com/om-mart" target="_blank">
               <button class="gradient-button clickable" id="project-button">Learn more</button>
               </a>
             </div>

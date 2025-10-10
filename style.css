@@ -1,12 +1,15 @@
 :root {
   --background-main: #121230;
   --background-secondary: #1b1f35;
-  --hover-opacity: 70%;
+  --background-nav: #171a2d;
+  --hover-opacity: 0.7;         /* use 0–1 for opacity */
   --text-color: #cad3f5;
   --tert-text: #8aadf4;
   --sub-text: #b8c0e0;
+  --nav-h: 72px;
 }
 
+/* ===================== Fonts ===================== */
 @font-face {
   font-family: 'PixelifySans';
   src: url('./fonts/PixelifySans-Regular.ttf') format('truetype');
@@ -32,48 +35,44 @@
   font-style: normal;
 }
 
+/* ===================== Reset ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
 html, body {
-  overflow: hidden;
-
-  height: 100%;
-  margin: 0;
+  min-height: 100%;
   background-color: var(--background-main);
   font-family: 'PixelifySans-SemiBold', sans-serif;
   background: url('assets/stars.gif') no-repeat center center fixed;
   background-size: cover;
 }
 
+/* Background dim layer */
 .background-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(21, 21, 32, 0.6); 
+  inset: 0;
+  background: rgba(21, 21, 32, 0.6);
   z-index: 0;
   pointer-events: none;
 }
 
-/* Navbar */
+/* ===================== Navbar ===================== */
 .nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start;      /* desktop default */
   align-items: center;
-  height: 5vh;
-  padding: 30px 0px 0px 30px; /* top right bottom left */
-  position: sticky;
+  height: var(--nav-h);
+  padding: 5px 0 0 0;
+  position: sticky;                 /* desktop behavior */
   top: 0;
-  z-index: 100;
+  background-color: var(--background-nav);
+  z-index: 1000;
+  width: 100%;
 }
 
 .nav > a {
@@ -83,8 +82,8 @@ html, body {
 }
 
 .nav-icon {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   background: url('assets/nyan.gif') center center no-repeat;
   background-size: contain;
 }
@@ -92,17 +91,15 @@ html, body {
 #nav-text {
   padding: 2vh;
   font-size: xx-large;
-  background-color: var(--background-main);
 }
 
-
-/* layout */
+/* ===================== Layout ===================== */
 .main-row {
   display: flex;
   justify-content: center;
   align-items: stretch;
   height: 100vh;
-  padding: 30px 30px 30px 100px; /* top right bottom left */
+  padding: 30px 30px 30px 100px;  /* top right bottom left */
   gap: 30px;
   position: relative;
   z-index: 1;
@@ -120,32 +117,43 @@ html, body {
   display: flex;
   flex: 3;
   flex-direction: column;
-  overflow-y: auto;
   align-items: center;
+  /* no overflow here; desktop-only scroll is added in media query */
 }
 
-/* containers */
+/* Add breathing room at bottom of page */
+.larger-column::after {
+  content: "";
+  display: block;
+  height: 60px; /* adjust as desired */
+}
+
+
+/* ===================== Cards & Containers ===================== */
 #links-container {
   display: flex;
   gap: 15px;
 }
+
 .navigation-button-container {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
+
 .bio-card {
-    display: flex;
-    background-color: var(--background-secondary);
-    padding: 40px;
-    border-radius: 15px;
-    max-width: 300px; 
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  background-color: var(--background-secondary);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 300px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
+
 .project-card {
   background-color: var(--background-secondary);
   border-radius: 15px;
@@ -164,9 +172,7 @@ html, body {
 
 .project-image-wrapper {
   flex: 2 1 0;
-  aspect-ratio: 1 / 1;
   border-radius: 15px 0 0 15px;
-  overflow: hidden;
   min-width: 0;
   max-width: 50%;
 }
@@ -174,6 +180,7 @@ html, body {
 .project-image {
   width: 100%;
   height: 100%;
+  object-fit: contain; /* or 'cover' for edge-to-edge imagery */
 }
 
 .project-content {
@@ -186,11 +193,8 @@ html, body {
   gap: 15px;
 }
 
-
-/* text */
-.text {
-  color: var(--text-color);
-}
+/* ===================== Text ===================== */
+.text { color: var(--text-color); }
 .subtext {
   color: var(--sub-text);
   font-size: 1.1rem;
@@ -200,29 +204,27 @@ html, body {
   text-align: start;
 }
 
-/* effects */
+/* ===================== Effects ===================== */
 .shadow {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
 }
 
-/* images */
+/* ===================== Images ===================== */
 .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 100px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: white;
+  border: 2px solid #fff;
 }
 
-/* buttons */
-.clickable:hover {
-  opacity: var(--hover-opacity);
-}
+/* ===================== Buttons ===================== */
+.clickable:hover { opacity: var(--hover-opacity); }
+
 .button-icon {
   width: 35px;
   height: 35px;
 }
+
 #resume-button {
   background: linear-gradient(135deg, #f5bde6, #c6a0f6, #f5a97f);
 }
@@ -230,7 +232,7 @@ html, body {
   background: linear-gradient(135deg, #8bd5ca, #b7bdf8, #8aadf4);
 }
 
-/* gradient */
+/* Gradient button shine */
 .gradient-button {
   position: relative;
   color: #151520;
@@ -241,16 +243,14 @@ html, body {
   font-family: 'PixelifySans-SemiBold', sans-serif;
   cursor: pointer;
   transition: opacity 0.3s ease;
-  overflow: hidden; /* Ensures shine stays within button */
+  overflow: hidden;
   z-index: 1;
 }
-
-/* Create the animated shine */
 .gradient-button::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -75px; /* Start off to the left */
+  left: -75px;
   width: 60px;
   height: 100%;
   background: linear-gradient(
@@ -262,37 +262,48 @@ html, body {
   opacity: 0.7;
   pointer-events: none;
   z-index: 2;
-  /* Animate the shine across the button */
   animation: shine-move 2.2s linear infinite;
 }
-
-/* Keyframes for the diagonal shine sweep */
 @keyframes shine-move {
-  0% {
-    left: -75px;
-  }
-  60% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
+  0%   { left: -75px; }
+  60%  { left: 100%; }
+  100% { left: 100%; }
 }
+.gradient-button span,
+.gradient-button { position: relative; z-index: 3; }
 
-/* Make sure the button text is above the shine */
-.gradient-button span, .gradient-button {
-  position: relative;
-  z-index: 3;
-}
-
-
+/* ===================== Mobile (<1000px) ===================== */
 @media (max-width: 1000px) {
+  /* Page scrolls normally on mobile */
+  html, body {
+    height: auto;
+    overflow: auto;
+  }
+
+  /* Fix the navbar and center its contents */
+  .nav {
+    position: fixed;           /* ensure it never disappears behind inner scrollers */
+    top: 0; left: 0; right: 0;
+    z-index: 9999;
+    justify-content: center;   /* center nav content on mobile */
+  }
+  .nav > a {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  #nav-text { text-align: center; }
+
+  /* Prevent content from sitting under the fixed nav */
+  body { padding-top: var(--nav-h); }
+
+  /* Stack layout and remove inner scrolling */
   .main-row {
     flex-direction: column;
     height: auto;
     width: 100vw;
     padding: 0;
     gap: 0;
+    overflow: visible;
   }
 
   .smaller-column,
@@ -313,25 +324,22 @@ html, body {
     width: 100vw;
     max-width: none;
     margin: 0 auto;
-    border-radius: 0;
+    border-radius: 15px;
   }
 
   .project-card-wrapper {
-    display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto; 
+    height: auto;
   }
 
   .project-image-wrapper {
     width: 100%;
     height: auto;
-
-    /* Override conflicting desktop styles */
     aspect-ratio: auto;
     flex: none;
     max-width: 100%;
-    border-radius: 0;
+    border-radius: 15px;
     overflow: hidden;
   }
 
@@ -346,5 +354,51 @@ html, body {
     padding: 16px;
     width: 100%;
   }
+
+  .larger-column {
+    height: auto;
+    overflow: visible;  /* no inner scroll on mobile */
+    gap: 20px;
+  }
 }
 
+/* ===================== Desktop (≥1000px) ===================== */
+/* Lock page scroll; only right column scrolls. Left column appears fixed. */
+@media (min-width: 1000px) {
+  html, body {
+    height: 100dvh;
+    overflow: hidden;  /* stop page scroll */
+  }
+
+  /* Navbar is sticky (default) and left-aligned on desktop */
+  .nav {
+    position: sticky;
+    justify-content: flex-start;
+  }
+
+  .main-row {
+    height: calc(100dvh - var(--nav-h));
+    overflow: hidden;  /* keep scroll inside children */
+  }
+
+  .smaller-column {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: calc(100dvh - var(--nav-h));
+    overflow: hidden;  /* no scroll here */
+  }
+
+  .larger-column {
+    height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;  /* ONLY the projects column scrolls */
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    /* breathing room at bottom of the scroll */
+    padding-bottom: 60px;
+    min-height: 0; /* ensures the flex child can actually scroll */
+  }
+
+  /* On desktop the nav is in normal flow, so no padding needed */
+  body { padding-top: 0; }
+}
