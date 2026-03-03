@@ -135,23 +135,17 @@ html, body {
   gap: 15px;
 }
 
-.navigation-button-container {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
 .bio-card {
   display: flex;
   background-color: var(--background-secondary);
-  padding: 40px;
+  padding: 60px;
   border-radius: 15px;
   max-width: 300px;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .project-card {
