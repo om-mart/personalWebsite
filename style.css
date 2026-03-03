@@ -2,35 +2,35 @@
   --background-main: #121230;
   --background-secondary: #1b1f35;
   --background-nav: #171a2d;
-  --hover-opacity: 0.7;         /* use 0–1 for opacity */
+  --hover-opacity: 0.7; /* use 0–1 for opacity */
   --text-color: #cad3f5;
   --tert-text: #8aadf4;
   --sub-text: #b8c0e0;
-  --nav-h: 72px;
+  --nav-h: 4.5rem;
 }
 
 /* ===================== Fonts ===================== */
 @font-face {
-  font-family: 'PixelifySans';
-  src: url('./fonts/PixelifySans-Regular.ttf') format('truetype');
+  font-family: "PixelifySans";
+  src: url("./fonts/PixelifySans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PixelifySans';
-  src: url('./fonts/PixelifySans-Medium.ttf') format('truetype');
+  font-family: "PixelifySans";
+  src: url("./fonts/PixelifySans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PixelifySans-SemiBold';
-  src: url('./fonts/PixelifySans-SemiBold.ttf') format('truetype');
+  font-family: "PixelifySans-SemiBold";
+  src: url("./fonts/PixelifySans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PixelifySans';
-  src: url('./fonts/PixelifySans-Bold.ttf') format('truetype');
+  font-family: "PixelifySans";
+  src: url("./fonts/PixelifySans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -42,13 +42,16 @@
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 
-html, body {
+html,
+body {
   min-height: 100%;
   background-color: var(--background-main);
-  font-family: 'PixelifySans-SemiBold', sans-serif;
-  background: url('assets/stars.gif') no-repeat center center fixed;
+  font-family: "PixelifySans-SemiBold", sans-serif;
+  background: url("assets/stars.gif") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -61,30 +64,46 @@ html, body {
   pointer-events: none;
 }
 
+/* ===================== Layout container ===================== */
+.main-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+  padding-inline: clamp(1.5rem, 4vw, 3rem);
+  padding-block: 1.875rem;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  position: relative;
+  z-index: 1;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
 /* ===================== Navbar ===================== */
 .nav {
   display: flex;
-  justify-content: flex-start;      /* desktop default */
+  justify-content: flex-start; /* desktop default */
   align-items: center;
   height: var(--nav-h);
-  padding: 5px 0 0 0;
-  position: sticky;                 /* desktop behavior */
+  padding: 0.3125rem 0 0 0;
+  position: sticky; /* desktop behavior */
   top: 0;
   background-color: var(--background-nav);
   z-index: 1000;
   width: 100%;
+  border-radius: 0 0 0.9375rem 0.9375rem;
 }
 
 .nav > a {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .nav-icon {
-  width: 90px;
-  height: 90px;
-  background: url('assets/nyan.gif') center center no-repeat;
+  width: 5.625rem;
+  height: 5.625rem;
+  background: url("assets/nyan.gif") center center no-repeat;
   background-size: contain;
 }
 
@@ -93,18 +112,7 @@ html, body {
   font-size: xx-large;
 }
 
-/* ===================== Layout ===================== */
-.main-row {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  height: 100vh;
-  padding: 30px 30px 30px 100px;  /* top right bottom left */
-  gap: 30px;
-  position: relative;
-  z-index: 1;
-}
-
+/* ===================== Columns ===================== */
 .smaller-column {
   display: flex;
   flex: 1;
@@ -118,43 +126,41 @@ html, body {
   flex: 3;
   flex-direction: column;
   align-items: center;
-  /* no overflow here; desktop-only scroll is added in media query */
 }
 
 /* Add breathing room at bottom of page */
 .larger-column::after {
   content: "";
   display: block;
-  height: 60px; /* adjust as desired */
+  height: 3.75rem;
 }
-
 
 /* ===================== Cards & Containers ===================== */
 #links-container {
   display: flex;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .bio-card {
   display: flex;
   background-color: var(--background-secondary);
-  padding: 60px;
-  border-radius: 15px;
-  max-width: 300px;
+  padding: 3.75rem;
+  max-width: 18.75rem;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 1.5625rem;
+  border-radius: 2.5rem;
 }
 
 .project-card {
   background-color: var(--background-secondary);
-  border-radius: 15px;
-  max-width: 1000px;
-  margin-bottom: 25px;
+  max-width: 62.5rem;
+  margin-bottom: 1.5625rem;
   width: 100%;
   padding: 0;
+  border-radius: 2.5rem;
 }
 
 .project-card-wrapper {
@@ -166,7 +172,7 @@ html, body {
 
 .project-image-wrapper {
   flex: 2 1 0;
-  border-radius: 15px 0 0 15px;
+  border-radius: 0.9375rem 0 0 0.9375rem;
   min-width: 0;
   max-width: 50%;
 }
@@ -174,7 +180,8 @@ html, body {
 .project-image {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* or 'cover' for edge-to-edge imagery */
+  object-fit: contain;
+  border-radius: 2.5rem;
 }
 
 .project-content {
@@ -182,13 +189,15 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px;
+  padding: 1.5rem;
   min-width: 0;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 /* ===================== Text ===================== */
-.text { color: var(--text-color); }
+.text {
+  color: var(--text-color);
+}
 .subtext {
   color: var(--sub-text);
   font-size: 1.1rem;
@@ -200,23 +209,25 @@ html, body {
 
 /* ===================== Effects ===================== */
 .shadow {
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
 /* ===================== Images ===================== */
 .profile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 100px;
-  border: 2px solid #fff;
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 6.25rem;
+  border: 0.125rem solid #fff;
 }
 
 /* ===================== Buttons ===================== */
-.clickable:hover { opacity: var(--hover-opacity); }
+.clickable:hover {
+  opacity: var(--hover-opacity);
+}
 
 .button-icon {
-  width: 35px;
-  height: 35px;
+  width: 2.1875rem;
+  height: 2.1875rem;
 }
 
 #resume-button {
@@ -230,28 +241,28 @@ html, body {
 .gradient-button {
   position: relative;
   color: #151520;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   font-size: 1.1rem;
-  font-family: 'PixelifySans-SemiBold', sans-serif;
+  font-family: "PixelifySans-SemiBold", sans-serif;
   cursor: pointer;
   transition: opacity 0.3s ease;
   overflow: hidden;
   z-index: 1;
 }
 .gradient-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
-  left: -75px;
-  width: 60px;
+  left: -4.6875rem;
+  width: 3.75rem;
   height: 100%;
   background: linear-gradient(
     120deg,
-    rgba(255,255,255,0) 30%,
-    rgba(255,255,255,0.8) 50%,
-    rgba(255,255,255,0) 70%
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 70%
   );
   opacity: 0.7;
   pointer-events: none;
@@ -259,50 +270,65 @@ html, body {
   animation: shine-move 2.2s linear infinite;
 }
 @keyframes shine-move {
-  0%   { left: -75px; }
-  60%  { left: 100%; }
-  100% { left: 100%; }
+  0% {
+    left: -4.6875rem;
+  }
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 .gradient-button span,
-.gradient-button { position: relative; z-index: 3; }
+.gradient-button {
+  position: relative;
+  z-index: 3;
+}
 
 /* ===================== Mobile (<1000px) ===================== */
-@media (max-width: 1000px) {
-  /* Page scrolls normally on mobile */
-  html, body {
+@media (max-width: 1500px) {
+  html,
+  body {
     height: auto;
     overflow: auto;
   }
 
-  /* Fix the navbar and center its contents */
   .nav {
-    position: fixed;           /* ensure it never disappears behind inner scrollers */
-    top: 0; left: 0; right: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 9999;
-    justify-content: center;   /* center nav content on mobile */
+    justify-content: center;
   }
   .nav > a {
     margin: 0 auto;
     justify-content: center;
   }
-  #nav-text { text-align: center; }
+  #nav-text {
+    text-align: center;
+  }
 
-  /* Prevent content from sitting under the fixed nav */
-  body { padding-top: var(--nav-h); }
+  body {
+    padding-top: var(--nav-h);
+  }
 
-  /* Stack layout and remove inner scrolling */
+  /* allow side padding + max width */
   .main-row {
     flex-direction: column;
     height: auto;
-    width: 100vw;
-    padding: 0;
+    width: 100%;
+    max-width: 48rem; /* or whatever you like */
+    padding-inline: 1.5rem; /* side padding */
+    margin: 0 auto;
     gap: 0;
     overflow: visible;
   }
 
   .smaller-column,
   .larger-column {
-    width: 100vw;
+    width: 100%;
     flex: none;
     display: flex;
     justify-content: center;
@@ -310,15 +336,16 @@ html, body {
   }
 
   .bio-card {
-    max-width: 95vw;
-    margin: 40px;
+    width: 100%;
+    max-width: 48rem;
+    margin: 2.5rem auto;
   }
 
   .project-card {
-    width: 100vw;
-    max-width: none;
-    margin: 0 auto;
-    border-radius: 15px;
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto 2rem;
+    border-radius: 0.9375rem;
   }
 
   .project-card-wrapper {
@@ -333,7 +360,7 @@ html, body {
     aspect-ratio: auto;
     flex: none;
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
     overflow: hidden;
   }
 
@@ -345,54 +372,28 @@ html, body {
   }
 
   .project-content {
-    padding: 16px;
+    padding: 1rem;
     width: 100%;
   }
 
   .larger-column {
     height: auto;
-    overflow: visible;  /* no inner scroll on mobile */
-    gap: 20px;
+    overflow: visible;
+    gap: 1.25rem;
   }
 }
 
-/* ===================== Desktop (≥1000px) ===================== */
-/* Lock page scroll; only right column scrolls. Left column appears fixed. */
-@media (min-width: 1000px) {
-  html, body {
-    height: 100dvh;
-    overflow: hidden;  /* stop page scroll */
-  }
-
-  /* Navbar is sticky (default) and left-aligned on desktop */
-  .nav {
-    position: sticky;
-    justify-content: flex-start;
-  }
-
+/* ===================== Extra-large (≥1600px) ===================== */
+@media (min-width: 1501px) {
   .main-row {
-    height: calc(100dvh - var(--nav-h));
-    overflow: hidden;  /* keep scroll inside children */
+    gap: 2.5rem;
   }
 
-  .smaller-column {
-    position: sticky;
-    top: 0;
-    align-self: flex-start;
-    height: calc(100dvh - var(--nav-h));
-    overflow: hidden;  /* no scroll here */
+  .bio-card {
+    max-width: 22rem;
   }
 
-  .larger-column {
-    height: calc(100dvh - var(--nav-h));
-    overflow-y: auto;  /* ONLY the projects column scrolls */
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-    /* breathing room at bottom of the scroll */
-    padding-bottom: 60px;
-    min-height: 0; /* ensures the flex child can actually scroll */
+  .project-card {
+    max-width: 70rem;
   }
-
-  /* On desktop the nav is in normal flow, so no padding needed */
-  body { padding-top: 0; }
 }
